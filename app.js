@@ -26,25 +26,37 @@ input.addEventListener('input', () => { error.textContent = ''; });
 // تظهر رسالة التخرج تدريجيًا حرفًا حرفًا عند فتح الموقع.
 const welcomeText = document.getElementById('welcomeText');
 const welcomeCongrats = document.getElementById('welcomeCongrats');
+const mainMessage = 'Today marks the beginning of an exciting new chapter in your life. A chapter filled with new opportunities, beautiful memories, and dreams waiting to come true. May this achievement be the first of many, and may your future be as bright as your ambition. You’ve worked hard to reach this moment, and you deserve every bit of happiness and success that comes your way.';
+const finalMessage = 'Congratulations on your graduation! 🎓';
+let welcomeTypingStarted = false;
+let typingTimers = [];
+
 function typeText(element, text, speed, done) {
   if (!element) { if (done) done(); return; }
   element.textContent = '';
-  let index = 0;
-  const tick = () => {
-    if (index >= text.length) { element.classList.remove('is-typing'); if (done) done(); return; }
-    element.textContent += text.charAt(index++);
-    setTimeout(tick, speed);
-  };
   element.classList.add('is-typing');
-  tick();
+  let index = 0;
+  const typeNext = () => {
+    if (index >= text.length) {
+      element.classList.remove('is-typing');
+      if (done) done();
+      return;
+    }
+    element.textContent += text.charAt(index++);
+    // Keep the last typed line visible on long messages and mobile screens.
+    const timer = window.setTimeout(typeNext, speed);
+    typingTimers.push(timer);
+  };
+  typeNext();
 }
-let welcomeTypingStarted = false;
 function startWelcomeTyping() {
   if (welcomeTypingStarted) return;
   welcomeTypingStarted = true;
-  const mainMessage = 'Today marks the beginning of an exciting new chapter in your life. A chapter filled with new opportunities, beautiful memories, and dreams waiting to come true. May this achievement be the first of many, and may your future be as bright as your ambition. You’ve worked hard to reach this moment, and you deserve every bit of happiness and success that comes your way.';
-  const finalMessage = 'Congratulations on your graduation! 🎓';
-  typeText(welcomeText, mainMessage, 32, () => typeText(welcomeCongrats, finalMessage, 55));
+  if (welcomeText) welcomeText.textContent = '';
+  if (welcomeCongrats) welcomeCongrats.textContent = '';
+  typeText(welcomeText, mainMessage, 28, () => {
+    window.setTimeout(() => typeText(welcomeCongrats, finalMessage, 65), 250);
+  });
 }
 
 const themeToggle = document.getElementById('themeToggle');

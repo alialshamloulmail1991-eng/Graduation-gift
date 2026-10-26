@@ -87,3 +87,16 @@ body:has(#giftSite:not(.hidden)) .floating-music{opacity:1;pointer-events:auto;t
 .typing-text { white-space: pre-wrap; overflow-wrap: anywhere; }
 .typing-text.is-typing::after { content: '▍'; display: inline-block; margin-inline-start: 2px; color: var(--gold, #c7a15a); animation: typing-caret 0.8s steps(1) infinite; }
 @keyframes typing-caret { 50% { opacity: 0; } }
+
+
+/* Robust typewriter presentation for GitHub Pages and mobile browsers */
+#welcomeText, #welcomeCongrats { min-height: 1.5em; }
+.typing-text { white-space: normal; overflow-wrap: anywhere; }
+.typing-text.is-typing::after {
+  content: '▍';
+  display: inline-block;
+  margin-inline-start: 3px;
+  color: var(--gold, #c7a15a);
+  animation: typing-caret 0.8s steps(1) infinite;
+}
+@keyframes typing-caret { 50% { opacity: 0; } }
