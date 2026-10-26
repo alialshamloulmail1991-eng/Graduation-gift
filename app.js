@@ -11,6 +11,7 @@ form.addEventListener('submit', (event) => {
   if (input.value.replace(/\s+/g, '') === CORRECT_PASSWORD) {
     lockScreen.classList.add('hidden');
     giftSite.classList.remove('hidden');
+    startWelcomeTyping();
     tryAutoplaySong();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
@@ -20,6 +21,31 @@ form.addEventListener('submit', (event) => {
   }
 });
 input.addEventListener('input', () => { error.textContent = ''; });
+
+
+// تظهر رسالة التخرج تدريجيًا حرفًا حرفًا عند فتح الموقع.
+const welcomeText = document.getElementById('welcomeText');
+const welcomeCongrats = document.getElementById('welcomeCongrats');
+function typeText(element, text, speed, done) {
+  if (!element) { if (done) done(); return; }
+  element.textContent = '';
+  let index = 0;
+  const tick = () => {
+    if (index >= text.length) { element.classList.remove('is-typing'); if (done) done(); return; }
+    element.textContent += text.charAt(index++);
+    setTimeout(tick, speed);
+  };
+  element.classList.add('is-typing');
+  tick();
+}
+let welcomeTypingStarted = false;
+function startWelcomeTyping() {
+  if (welcomeTypingStarted) return;
+  welcomeTypingStarted = true;
+  const mainMessage = 'Today marks the beginning of an exciting new chapter in your life. A chapter filled with new opportunities, beautiful memories, and dreams waiting to come true. May this achievement be the first of many, and may your future be as bright as your ambition. You’ve worked hard to reach this moment, and you deserve every bit of happiness and success that comes your way.';
+  const finalMessage = 'Congratulations on your graduation! 🎓';
+  typeText(welcomeText, mainMessage, 32, () => typeText(welcomeCongrats, finalMessage, 55));
+}
 
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon = document.getElementById('themeIcon');
