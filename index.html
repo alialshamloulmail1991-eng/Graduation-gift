@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17120f">
+  <title>حكاية تخرّجها ✦</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <section class="lock-screen" id="lockScreen">
+    <div class="lock-glow"></div>
+    <div class="lock-card">
+      <div class="cap-art">✦ <span>🎓</span> ✦</div>
+      <p class="eyebrow">A NEW CHAPTER BEGINS</p>
+      <h1>حكاية نجاح<br><em>تستاهل الاحتفال</em></h1>
+      <p class="intro">فيه لحظة جميلة مستنياكي… افتحي هديتك واحتفلي باللي وصلتي له.</p>
+      <form id="passwordForm">
+        <label for="passwordInput">كلمة السر</label>
+        <input id="passwordInput" type="password" inputmode="numeric" autocomplete="off" placeholder="٢٧ ١٠" required>
+        <button class="gold-button" type="submit">افتحي الحكاية <span>↗</span></button>
+        <p class="error" id="errorMessage" aria-live="polite"></p>
+      </form>
+      <div class="lock-foot">صُنعت بمحبة للاحتفال بإنجازكِ</div>
+    </div>
+  </section>
+
+  <main id="giftSite" class="hidden">
+    <nav class="nav wrap">
+      <a class="wordmark" href="#top"><span>✦</span> HER CHAPTER</a>
+      <div class="nav-actions">
+        <a href="#memories">الصور</a><a href="#film">الفيديو</a><a href="#letter">الرسالة</a>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="تبديل الوضع" title="تبديل الوضع"><span id="themeIcon">☾</span></button>
+      </div>
+    </nav>
+
+    <section class="hero wrap" id="top">
+      <div class="hero-copy">
+        <div class="overline"><span></span> THE GRADUATION EDITION</div>
+        <h1>مش مجرد تخرّج…<br><em>دي بداية حكاية</em></h1>
+        <p class="hero-text">وراء اللحظة دي تعب، وصبر، وأيام طويلة… والنهارده جه وقت الفخر. دي مساحة صغيرة تحتفل بيكي وبكل حاجة حلوة مستنياكي.</p>
+        <a class="outline-button" href="#memories">ابدئي الرحلة <span>↓</span></a>
+        <div class="hero-note"><span class="star">✦</span><span>لكل خطوة وصلتكِ لهنا… تستاهلي الفخر.</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="photo-backdrop"></div>
+        <img src="assets/graduation-photo-1.jpg" alt="صورة التخرّج والذكرى الجميلة" class="hero-image">
+        <div class="floating-tag tag-top">A MOMENT TO REMEMBER</div>
+        <div class="floating-tag tag-bottom"><span>✦</span> فخورة بيكي</div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      </div>
+    </section>
+
+    <section class="wrap memories section" id="memories">
+      <div class="section-top"><div><p class="overline">01 / THE MEMORIES</p><h2>لحظات من <em>حكايتكِ</em></h2></div><p>كل صورة ذكرى، وكل ذكرى بتقول إن الرحلة كانت تستاهل.</p></div>
+      <div class="gallery">
+        <figure class="gallery-card gallery-large"><div class="image-wrap"><img src="assets/graduation-photo-1.jpg" alt="صورة التخرّج الأولى" loading="lazy"><span class="image-index">01</span></div><figcaption><strong>لحظة فخر</strong><span>تعبكِ اتحوّل لذكرى جميلة ✦</span></figcaption></figure>
+        <figure class="gallery-card gallery-small"><div class="image-wrap"><img src="assets/graduation-photo-2.jpg" alt="صورة التخرّج الثانية" loading="lazy"><span class="image-index">02</span></div><figcaption><strong>بداية جديدة</strong><span>والأجمل لسه جاي بإذن الله.</span></figcaption></figure>
+      </div>
+      <p class="upload-hint">مكان الصور الجاية: أضيفي صوركِ الجديدة داخل مجلد assets، ثم ضعيها في المعرض.</p>
+    </section>
+
+    <section class="film-section" id="film">
+      <div class="wrap section">
+        <div class="section-top"><div><p class="overline">02 / THE MEMORY FILM</p><h2>لحظات <em>على الشاشة</em></h2></div><p>الفيديو الأصلي موجود زي ما هو؛ شغّليه وقت ما تحبي.</p></div>
+        <div class="film-layout">
+          <div class="film-copy"><span class="film-number">THE MEMORY FILM</span><h3>لحظاتكِ<br>على الشاشة الكبيرة.</h3><p>خدي وقتك، شغّلي الفيديو، وعيشي اللحظة من جديد.</p><div class="film-caption">صوت الصورة وحكاية اللحظة… <span>✦</span></div></div>
+          <div class="video-frame"><video controls playsinline preload="metadata" poster="assets/graduation-photo-2.jpg"><source src="assets/graduation-video.mp4" type="video/mp4">متصفحك لا يدعم تشغيل الفيديو.</video></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="film-section" id="music">
+      <div class="wrap section">
+        <div class="section-top"><div><p class="overline">02 / A SONG FOR THE MOMENT</p><h2>أغنية <em>للذكرى</em></h2></div><p>الأغنية بتشتغل في الخلفية، وتقدري تتحكمي فيها من الزر الصغير أسفل الشاشة.</p></div>
+        <div class="film-layout">
+          <div class="film-copy"><span class="film-number">A LITTLE SOUNDTRACK</span><h3>لحظة حلوة<br>ليها صوتها.</h3><p>اضغطي على الزر لتشغيل الأغنية، وتقدري توقفيها أو ترجعي تشغليها في أي وقت.</p><div class="film-caption">ذكرى بصوت الموسيقى… <span>✦</span></div></div>
+          <div class="music-player">
+            <div class="music-art">♫<span>✦</span></div>
+            <p class="music-label">YOUR GRADUATION MOMENT</p>
+            <h3>موسيقى الذكرى</h3>
+            <p class="music-note">الأغنية اللي اخترتيها للهدية</p>
+            <audio id="giftSong" preload="auto" loop><source src="assets/graduation-song.mp3" type="audio/mpeg">متصفحك لا يدعم تشغيل الصوت.</audio>
+            <p class="music-status" id="musicStatus" aria-live="polite">هنحاول نشغّل الأغنية تلقائيًا بعد فتح الهدية.</p>
+          </div>
+        </div>
+        <p class="upload-hint">زر التحكم الصغير أسفل الشاشة لتشغيل الأغنية أو إيقافها. قد يمنع المتصفح التشغيل التلقائي حتى أول تفاعل منكِ.</p>
+      </div>
+    </section>
+
+    <section class="wrap letter-section section" id="letter">
+      <div class="letter-card">
+        <div class="letter-topline"><span>WITH LOVE</span><span>✦</span><span>FOR YOUR NEXT CHAPTER</span></div>
+        <p class="overline">03 / A LETTER FOR YOU</p>
+        <h2>إلى صاحبة <em>الإنجاز الجميل</em></h2>
+        <div class="letter-rule"><span>✦</span></div>
+        <p>النهارده مش نهاية طريق، دي بداية فصل جديد في حياتكِ؛ فصل مليان فرص، ونجاحات، وأحلام مستنية دورها علشان تتحقق.</p>
+        <p>يمكن الطريق ماكانش سهل في كل لحظاته، لكن كل تعب وكل خطوة وكل مرة كملتي فيها رغم الصعوبات، كانوا بيقرّبوكي من اليوم ده.</p>
+        <p>أتمنى إن الإنجاز ده يكون أول فرحة من فرحات كتير، وإن مستقبلكِ يبقى أجمل من كل اللي رسمتيه في خيالكِ، وإنكِ تفضلي دايمًا فخورة بنفسكِ وباللي بتعمليه.</p>
+        <p class="letter-highlight">تستاهلي الفرحة، وتستاهلي الفخر، وتستاهلي كل باب جميل يفتحه ربنا قدامكِ.</p>
+        <p>ألف مبروك التخرّج يا بطلة. خليكي دايمًا مؤمنة إن دي مجرد البداية… وإن اللي جاي بإذن الله أجمل. 🎓</p>
+        <div class="letter-sign"><span>✦</span><span>بكل الحب والفخر</span><span>✦</span></div>
+      </div>
+    </section>
+
+    <section class="closing wrap">
+      <span class="closing-star">✦</span>
+      <p class="overline">YOUR STORY IS JUST BEGINNING</p>
+      <h2>ارفعي راسكِ…<br><em>دي لحظتكِ.</em></h2>
+      <p>مبروك على اللي حققتيه، وعلى كل حلم لسه في الطريق.</p>
+      <a href="#top" class="back-top">ارجعي لبداية الحكاية ↑</a>
+    </section>
+    <section class="countdown-section wrap" id="the-surprise">
+      <div class="countdown-card">
+        <p class="overline">A LITTLE SURPRISE IS WAITING</p>
+        <h2>ولسه في <em>مفاجأة أخيرة</em></h2>
+        <p class="countdown-intro" id="countdownIntro">كل ثانية بتقرّبنا من يوم مميز… ٢٧ أكتوبر ٢٠٢٦</p>
+        <div class="countdown-grid" id="countdownGrid" aria-label="الوقت المتبقي حتى يوم الهدية">
+          <div class="time-tile"><strong id="countDays">—</strong><span>يوم</span></div>
+          <div class="time-tile"><strong id="countHours">—</strong><span>ساعة</span></div>
+          <div class="time-tile"><strong id="countMinutes">—</strong><span>دقيقة</span></div>
+          <div class="time-tile"><strong id="countSeconds">—</strong><span>ثانية</span></div>
+        </div>
+        <p class="countdown-whisper" id="countdownWhisper">موعد صغير… لفرحة كبيرة ♡</p>
+        <div class="gift-reveal hidden" id="giftReveal">
+          <button class="gift-box-button" id="openGiftBox" type="button" aria-label="افتحي صندوق المفاجأة">
+            <span class="gift-bow">✦</span><span class="gift-lid"></span><span class="gift-box"><i></i></span><span class="gift-spark spark-one">✧</span><span class="gift-spark spark-two">✦</span>
+          </button>
+          <p class="gift-instruction" id="giftInstruction">وصل اليوم المنتظر… اضغطي على الصندوق وافتحي مفاجأتكِ.</p>
+          <div class="gift-message hidden" id="giftMessage" aria-live="polite">
+            <span class="message-cap">🎓 ✦ 🎓</span>
+            <h3>النهارده يومكِ…</h3>
+            <p>كل تعب عدى كان بيقرّبكِ من اللحظة دي، وكل حلم جاي يستاهل إنكِ تحلمي بيه من جديد.</p>
+            <p class="gift-message-highlight">ألف مبروك التخرج! دي مش نهاية الحكاية… دي أجمل بداية لفصل جديد من نجاحكِ وفرحتكِ. ♡</p>
+            <span class="message-sparkle">✦ ✧ ✦</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer wrap"><span>HER CHAPTER <b>✦</b></span><span>صُنعت بمحبة للاحتفال بنجاحكِ</span><span>GRADUATION • NEW BEGINNINGS</span></footer>
+  </main>
+  <div class="floating-music" id="floatingMusic" aria-label="التحكم في أغنية الخلفية">
+    <span class="floating-music-note" aria-hidden="true">♫</span>
+    <span class="floating-music-label">الأغنية</span>
+    <button id="musicToggle" type="button" aria-label="تشغيل الأغنية" title="تشغيل أو إيقاف الأغنية"><span id="musicIcon">▶</span></button>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
